@@ -1,0 +1,31 @@
+{
+  "name": "saltire-util",
+  "version": "0.0.1",
+  "description": "A set of easy to use and suggestive JavaScript tool library",
+  "main": "index.js",
+  "repository": "git@github.com:saltires/saltire-util.git",
+  "author": "saltire<ye998102@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "conventional-changelog": "^3.1.24",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "4.2.5",
+    "rimraf": "^3.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "scripts": {
+    "log": "rimraf CHANGELOG.md && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  }
+}
