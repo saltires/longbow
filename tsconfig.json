@@ -1,0 +1,19 @@
+/* Visit https://aka.ms/tsconfig.json to read more about this file */
+{
+    "compilerOptions": {
+        "target": "ES2018", // require node >= 10
+        "module": "CommonJS",
+        "declaration": true,
+        // 使用 "outDir"指定的目录下的文件永远会被编译器排除
+        "outDir": "lib",
+        // 以严格模式解析并为每个源文件生成 "use strict"语句
+        "strict": true, 
+        // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查
+        "esModuleInterop": true,
+        // 给错误和消息设置样式，使用颜色和上下文
+        "pretty": true
+    },
+    "include": [
+        "src"
+    ] // declarations.d.ts
+}
