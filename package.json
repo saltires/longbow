@@ -11,24 +11,34 @@
     "@babel/preset-env": "^7.13.9",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "conventional-changelog": "^3.1.24",
     "conventional-changelog-cli": "^2.1.1",
     "cz-conventional-changelog": "^3.3.0",
     "del": "^6.0.0",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify": "^3.0.2",
     "husky": "4.2.5",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
     "merge2": "^1.4.1",
+    "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.3",
     "tsify": "^5.0.2",
     "typescript": "^4.2.3",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "vuepress": "^1.8.2"
   },
   "config": {
     "commitizen": {
@@ -37,12 +47,24 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn lint",
+      "yarn prettier"
+    ]
   },
   "scripts": {
     "log": "rimraf CHANGELOG.md && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "build": "gulp",
-    "dev": "gulp --dev"
+    "build": "yarn lint && yarn jest && yarn lint && gulp",
+    "dev": "yarn test && gulp --dev",
+    "lint": "eslint src",
+    "test": "rimraf lib && tsc && jest",
+    "prettier": "prettier src src --write",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   }
 }
