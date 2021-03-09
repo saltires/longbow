@@ -13,7 +13,7 @@ module.exports = {
     // 配置基本端口
     port: "8081",
     head: [ // 注入到当前页面的 HTML <head> 中的标签
-        ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
+        ['link', { rel: 'shortcut icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
     ],
     markdown: {
         lineNumbers: true // 代码块显示行号
