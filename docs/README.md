@@ -1,16 +1,16 @@
 ---
 home: true
 # heroImage: /hero.png
-heroText: saltire-utils
-tagline: 项目中实用的工具库
-actionText: 查询 API
+heroText: saltire-util
+tagline: 实用、快速、提示性强的 Javascript 工具库
+actionText: 开始使用
 actionLink: /api/common
 features:
-  - title: 模块划分
-    details: 按照功能的不同划分成不同的模块
-  - title: 提示性强
-    details: 使用 Typescript 开发，使用时具有强提示
-  - title: 单文件
-    details: 使用 gulp 压缩打包为单文件，体积小
+  - title: 广泛的实用性
+    details: 按平时项目中使用的工具库功能来划分模块，实用性强
+  - title: 强大的语法提示
+    details: 使用 Typescript 开发，使用时具有语法强提示，推荐使用 VsCode
+  - title: 单文件库
+    details: 使用 gulp 压缩打包为单文件，体积小，速度快
 footer: MIT Licensed | Copyright © 2021-present saltire
 ---

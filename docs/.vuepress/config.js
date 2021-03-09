@@ -5,7 +5,7 @@ var path = require('path');
 
 module.exports = {
     // 配置网站标题
-    title: packageJson.name,
+    title: packageJson.name + ' 中文文档',
     // 配置网站描述
     description: packageJson.description,
     // 配置基本路径
