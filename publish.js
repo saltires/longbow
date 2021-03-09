@@ -16,7 +16,7 @@ const run = async () => {
         console.log(pull)
 
         // 拉取代码失败
-        if (pull.stdout !== 'Already up to date.\n') {
+        if (pull.stderr !== '') {
             throw new Error('拉取代码失败!')
         }
 
