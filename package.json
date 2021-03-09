@@ -69,6 +69,6 @@
     "prettier": "prettier src src --write",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "pub": "node publish.js"
+    "pub": "node publish/index.js"
   }
 }

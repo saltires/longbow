@@ -1,10 +1,9 @@
-var execShPromise = require("exec-sh").promise;
-var copy = require('copy');
-var path = require('path')
+const execShPromise = require("exec-sh").promise;
+const copy = require('copy');
+const path = require('path');
+const CONFIG = require('./config')
 
 const resolve = p => path.resolve(__dirname, p)
-
-// console.log(resolve('docs/.vuepress/dist/'))
 
 // run interactive bash shell
 const run = async () => {
@@ -13,12 +12,13 @@ const run = async () => {
     try {
         pull = await execShPromise('git pull', true);
 
-        console.log(pull)
-
         // 拉取代码失败
         if (pull.stderr !== '') {
             throw new Error('拉取代码失败!')
         }
+
+        // 构建之前先删除旧的构建代码
+        await execShPromise('yarn rimraf ' + resolve(CONFIG.dist))
 
         build = await execShPromise('yarn docs:build', true);
 
@@ -26,8 +26,10 @@ const run = async () => {
 
         if (buildState === false) throw new Error('执行 yarn docs:build 进行构建时失败!')
 
-        copy(resolve('docs/.vuepress/dist/**/*'), '/usr/share/nginx/html/', function (err, files) {
-            console.log(files)
+        // 发布之前先删除旧的站点代码
+        await execShPromise('yarn rimraf ' + CONFIG.publishDir)
+
+        copy(resolve(CONFIG.dist), CONFIG.publishDir, function (err, files) {
             if (err) throw err;
             // `files` is an array of the files that were copied
         });
@@ -36,7 +38,6 @@ const run = async () => {
         console.log('Error: ', e);
         console.log('Stderr: ', e.stderr);
         console.log('Stdout: ', e.stdout);
-
         return e;
     }
 }
