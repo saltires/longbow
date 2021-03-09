@@ -18,10 +18,12 @@
     "browserify": "^17.0.0",
     "conventional-changelog": "^3.1.24",
     "conventional-changelog-cli": "^2.1.1",
+    "copy": "^0.3.2",
     "cz-conventional-changelog": "^3.3.0",
     "del": "^6.0.0",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
+    "exec-sh": "^0.3.4",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-sourcemaps": "^3.0.0",
@@ -66,6 +68,7 @@
     "test": "rimraf lib && tsc && jest --watch",
     "prettier": "prettier src src --write",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "pub": "node publish.js"
   }
 }
