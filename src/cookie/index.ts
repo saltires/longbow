@@ -39,7 +39,7 @@ function clearCookie(site: string, name: string): void {
 /**
  * @date 2020-07-09
  * @author saltire
- * @description 解析 HTTP Cookie 标头字符串并返回所有 cookie 的 name-value 对的对象
+ * @description 解析 HTTP Cookie 字符串并返回所有 cookie 的 name-value 对的对象
  * @return (object)
  */
 function parseCookie(): AnyObject {
@@ -87,7 +87,7 @@ interface cookieInterface {
    */
   clearCookie: (site: string, name: string) => void;
   /**
-   * 解析 HTTP Cookie 标头字符串并返回所有 cookie 的 name-value 对的对象
+   * 解析 HTTP Cookie 字符串并返回所有 cookie 的 name-value 对的对象
    * @example parseCookie() === {foo: "1", bar: "2"}
    */
   parseCookie: () => AnyObject;

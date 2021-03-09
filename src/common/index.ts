@@ -88,7 +88,7 @@ function downoladFile(url: string, name: string): void {
  * @description 控制函数只执行一次
  * @param 希望被控制的函数
  */
-function once(fn: (...args: any[]) => any): AnyObject {
+function once(fn: (...args: any[]) => void): AnyObject {
   let flag = false;
 
   return function (...args: []) {
@@ -142,7 +142,7 @@ interface commonInterface {
    * @param fn - 希望被控制的函数
    * @example once(function(){console.log('foo')})()
    */
-  once: (fn: any) => any;
+  once: (fn: (...args: any[]) => void) => AnyObject;
 }
 
 export { common, commonInterface };
