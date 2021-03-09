@@ -27,6 +27,9 @@ _.flatten([1,2,[3,4],[5,6,[7,8]]])
 // => [1,2,3,4,5,6,7,8]
 ```
 
+<br>
+<br>
+
 ## `debounce` <Badge text="0.0.1+"/>
 
 ``` javascript
@@ -56,6 +59,9 @@ const callback = _.debounce(e => console.log(e))
 document.getElementById('foo').addEventListener('mousemove', callback)
 ```
 
+<br>
+<br>
+
 ## `copyToClipboard` <Badge text="0.0.1+"/>
 
 ``` javascript
@@ -81,6 +87,9 @@ import _ from 'saltire-util'
 
 _.copyToClipboard('saltire-util is so helpful!')
 ```
+
+<br>
+<br>
 
 ## `downoladFile` <Badge text="0.0.1+"/>
 
@@ -108,6 +117,9 @@ import _ from 'saltire-util'
 
 _.downoladFile('http:example.com/file.pdf', '百科全书.pdf')
 ```
+
+<br>
+<br>
 
 ## `once` <Badge text="0.0.1+"/>
 

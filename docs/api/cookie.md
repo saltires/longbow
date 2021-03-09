@@ -34,6 +34,9 @@ import _ from 'saltire-util'
 _.setCookie('example.com', 'foo', 'bar', 3)
 ```
 
+<br>
+<br>
+
 ## `getCookie` <Badge text="0.0.1+"/>
 
 ``` javascript
@@ -59,6 +62,9 @@ import _ from 'saltire-util'
 
 _.getCookie('foo') === "bar"
 ```
+
+<br>
+<br>
 
 ## `clearCookie` <Badge text="0.0.1+"/>
 
@@ -86,6 +92,9 @@ import _ from 'saltire-util'
 
 _.clearCookie('example.com', 'foo')
 ```
+
+<br>
+<br>
 
 ## `parseCookie` <Badge text="0.0.1+"/>
 
