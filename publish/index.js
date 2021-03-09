@@ -34,6 +34,11 @@ const run = async () => {
             // `files` is an array of the files that were copied
         });
 
+        // 拷贝站点图标
+        copy(resolve(CONFIG.publicDir), CONFIG.publishDir, function (err, files) {
+            if (err) throw err;
+        });
+
     } catch (e) {
         console.log('Error: ', e);
         console.log('Stderr: ', e.stderr);

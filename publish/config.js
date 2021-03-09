@@ -4,5 +4,7 @@ module.exports = {
     // 打包后的目录地址中所有文件匹配符
     dist: '../docs/.vuepress/dist/**/*',
     // 打包后的目录地址
-    distDir: '../docs/.vuepress/dist/'
+    distDir: '../docs/.vuepress/dist/',
+    // 站点的 public 文件夹
+    publicDir: '../docs/public/**/*'
 }
