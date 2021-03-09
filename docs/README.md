@@ -1,16 +1,16 @@
 ---
 home: true
 # heroImage: /hero.png
-heroText: algorithms-utils
-tagline: 算法与 TypeScript 实现
-actionText: 开始学习
-actionLink: /guide/
+heroText: saltire-utils
+tagline: 项目中实用的工具库
+actionText: 查询 API
+actionLink: /api/common
 features:
-  - title: 精简理论
-    details: 精简《算法导论》的内容，帮助自己更容易学习算法理论知识。
-  - title: 习题练习
-    details: 解答《算法导论》的习题，帮助自己更好的实践算法理论知识。
-  - title: 面题精选
-    details: 搜集常见的面试题目，提升自己的算法编程能力以及面试通过率。
-footer: MIT Licensed | Copyright © 2020-present 子弈
+  - title: 模块划分
+    details: 按照功能的不同划分成不同的模块
+  - title: 提示性强
+    details: 使用 Typescript 开发，使用时具有强提示
+  - title: 单文件
+    details: 使用 gulp 压缩打包为单文件，体积小
+footer: MIT Licensed | Copyright © 2021-present saltire
 ---
