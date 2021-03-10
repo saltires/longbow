@@ -12,6 +12,7 @@ test('baidu title is correct', async () => {
     const page = await browser.newPage();
     await page.goto('https://baidu.com');
     const title = await page.title();
+    await page.once('load', () => console.log('Page loaded!'));
     expect(title).toBe('百度一下，你就知道');
     await browser.close();
 })

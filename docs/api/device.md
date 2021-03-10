@@ -1,28 +1,24 @@
 # 设备模块
 
-## `flatten` <Badge text="0.0.1+"/>
+## `inBrowser` <Badge text="0.0.1+"/>
 
 ``` javascript
-flatten(array)
+inBrowser: () => boolean;
 ```
 
 #### 功能描述
 
-`数组扁平化`：对多维数组进行扁平化处理，并返回一个一维数组。
-
-#### 参数
-
-- `array(Array)`：必须，待扁平化的数组
+`是否是浏览器环境`：判断是否处于浏览器环境中
 
 #### 返回
 
-`array(Array)`：扁平化后的新数组
+`bol(Boolean)`：为 true 表示是浏览器环境
 
 #### 示例
 
 ``` javascript
 import _ from 'saltire-util'
 
-_.flatten([1,2,[3,4],[5,6,[7,8]]])
-// => [1,2,3,4,5,6,7,8]
+_.inBrowser()
+// => true in browser
 ```
