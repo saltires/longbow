@@ -4,6 +4,7 @@
         "target": "ES2015", // require node >= 10
         "module": "ES2015",
         "declaration": true,
+        "moduleResolution": "Node",
         // 使用 "outDir"指定的目录下的文件永远会被编译器排除
         "outDir": "lib",
         // 以严格模式解析并为每个源文件生成 "use strict"语句
@@ -12,20 +13,6 @@
         "esModuleInterop": true,
         // 给错误和消息设置样式，使用颜色和上下文
         "pretty": true,
-        "paths": {
-            "@babel/types": [
-                "./node_modules/@babel/types/lib/index.d.ts"
-            ],
-            "@babel/parser": [
-                "./node_modules/@babel/parser/typings/babel-parser.d.ts"
-            ],
-            "jest-diff": [
-                "./node_modules/jest-diff/build/index.d.ts"
-            ],
-            "pretty-format": [
-                "./node_modules/pretty-format/build/index.d.ts"
-            ]
-        }
     },
     "include": [
         "src"

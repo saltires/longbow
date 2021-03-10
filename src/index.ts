@@ -6,7 +6,7 @@ import { dom, domInterface } from "./dom/index";
 import { check, checkInterface } from "./regexp/index";
 import { str, stringInterface } from "./string/index";
 import { url, urlInterface } from "./url/index";
-// import { name, version } from "../package.json";
+import { name, version } from "../package.json";
 
 interface saltireUtilInterface
   extends commonInterface,
@@ -22,7 +22,7 @@ interface saltireUtilInterface
 }
 
 const saltireUtil: saltireUtilInterface = Object.assign(
-  { name: "saltire-util", version: "0.0.1" },
+  { name, version },
   cookie,
   common,
   date,
