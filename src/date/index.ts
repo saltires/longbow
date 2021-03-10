@@ -90,13 +90,14 @@ function isLeapYear(d: potentialDate): boolean {
 function getFirstDayOfMonth(d: potentialDate): number {
   const date = new Date(d);
   const day = (date.getDay() - (date.getDate() - 1)) % 7;
-  return day < 0 ? day + 7 : day;
+  return day <= 0 ? day + 7 : day;
 }
 
 /* 返回指定月份的最后一天是星期几，返回值是1-7的数字 */
 function getLastDayOfMonth(d: potentialDate): number {
   const date = new Date(d);
-  return new Date(getLastDateOfMonth(date)).getDay();
+  const day = new Date(getLastDateOfMonth(date)).getDay();
+  return day === 0 ? 7 : day;
 }
 
 /* 返回指定年月第一天的日期 */
@@ -180,7 +181,7 @@ interface dateObject {
   ms: number;
 }
 
-// 获取时间差,提供两个时间戳，返回一个对象,为负数表示当前time1比time2小
+// 获取时间差，提供两个时间戳，返回一个对象，为负数表示当前 time1 比 time2 小
 function timeDifference(time1: number, time2: number): dateObject {
   const s1 = time1;
   const s2 = time2;
@@ -308,7 +309,7 @@ interface dateInterface {
   timeEndChange: (date: potentialDate) => number;
 
   /**
-   * 获取时间差,提供两个时间戳，返回一个对象,为负数表示当前time1比time2小
+   * 获取时间差，提供两个时间戳，返回一个对象，为负数表示当前 time1 比 time2 小
    * @param time1 - 第一个时间的时间戳
    * @param time2 - 第二个时间的时间戳
    */
