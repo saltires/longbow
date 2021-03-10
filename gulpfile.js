@@ -7,8 +7,8 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat')
 const rollup = require('gulp-rollup')
 const json = require('@rollup/plugin-json');
-const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel')
 
 const DEVMODE = process.argv[2] === "--dev" ? true : false
 
@@ -35,15 +35,6 @@ const compile = () => {
     ]);
 }
 
-// 使用 babel 转换 ES6 语法
-const transform = () => {
-    return src('./lib/**/*.js')
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-        .pipe(dest('lib'))
-}
-
 // 使用 rollup 对生成的库进行打包聚合，并通过压缩减小文件数量和体积
 const bundle = () => {
     return src(['./lib/**/*.js', './*.json'])
@@ -53,9 +44,12 @@ const bundle = () => {
             // any option supported by Rollup can be set here.
             input: './lib/index.js',
             output: {
-                format: 'es',
+                format: 'esm'
             },
             plugins: [json()]
+        }))
+        .pipe(babel({
+            presets: [['@babel/preset-env', { "modules": false }]],
         }))
         .pipe(uglify())
         .pipe(sourcemaps.write('./'))
@@ -63,7 +57,7 @@ const bundle = () => {
 }
 
 
-const generator = series(clean, html, compile, transform, bundle)
+const generator = series(clean, html, compile, bundle)
 
 const change = DEVMODE ? () => {
     watch('src/**/*.ts', generator)
