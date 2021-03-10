@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /hero.png
-heroText: saltire-util
+heroText: saltire-tool
 tagline: 实用、快速、提示性强的 Javascript 工具库
 actionText: 开始使用
 actionLink: /api/common
@@ -11,6 +11,6 @@ features:
   - title: 强大的语法提示
     details: 使用 Typescript 开发，使用时具有语法强提示，推荐使用 VsCode
   - title: 单文件库
-    details: 使用 gulp 压缩打包为单文件，体积小，速度快
+    details: 经 gulp 及 rollup 压缩打包为单文件，体积小，速度快
 footer: MIT Licensed | Copyright © 2021-present saltire
 ---

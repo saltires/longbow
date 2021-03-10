@@ -1,6 +1,13 @@
 {
   "name": "saltire-tool",
   "version": "0.0.1",
+  "keywords": [
+    "typescript",
+    "tool",
+    "util",
+    "saltire",
+    "javascript"
+  ],
   "description": "A set of easy to use and suggestive JavaScript tool library",
   "main": "./dist/index.js",
   "repository": "git@github.com:saltires/saltire-util.git",
@@ -9,6 +16,7 @@
   "files": [
     "dist"
   ],
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@babel/core": "^7.13.8",
     "@babel/preset-env": "^7.13.9",
