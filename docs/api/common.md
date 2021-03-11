@@ -146,3 +146,340 @@ import _ from 'saltire-tool'
 
 _.once(function(){console.log('foo')})()
 ```
+
+<br>
+<br>
+
+## `isArray` <Badge text="0.0.1+"/>
+
+``` javascript
+isArray?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是数组
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是数组类型，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isArray', () => {
+    expect(_.isArray('[]')).toBe(false)
+    expect(_.isArray([])).toBe(true)
+    expect(_.isArray(3)).toBe(false)
+    expect(_.isArray(new Array())).toBe(true)
+    expect(_.isArray(new Set())).toBe(false)
+})
+```
+
+<br>
+<br>
+
+## `isBoolean` <Badge text="0.0.1+"/>
+
+``` javascript
+isBoolean?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是布尔值
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是布尔类型，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isBoolean', () => {
+    expect(_.isBoolean([])).toBe(false)
+    expect(_.isBoolean(3)).toBe(false)
+    expect(_.isBoolean(true)).toBe(true)
+    expect(_.isBoolean(false)).toBe(true)
+    expect(_.isBoolean('true')).toBe(false)
+})
+```
+
+<br>
+<br>
+
+## `isDate` <Badge text="0.0.1+"/>
+
+``` javascript
+isDate?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是日期对象
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是日期对象，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isDate', () => {
+    expect(_.isDate([])).toBe(false)
+    expect(_.isDate(3)).toBe(false)
+    expect(_.isDate(new Date())).toBe(true)
+    expect(_.isDate('2020-01-02')).toBe(false)
+    expect(_.isDate('true')).toBe(false)
+})
+```
+
+<br>
+<br>
+
+## `isFunction` <Badge text="0.0.1+"/>
+
+``` javascript
+isFunction?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是函数
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是函数，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isFunction', () => {
+    expect(_.isFunction([])).toBe(false)
+    expect(_.isFunction(function() {})).toBe(true)
+    expect(_.isFunction(() => 3)).toBe(true)
+})
+```
+
+<br>
+<br>
+
+## `isNumber` <Badge text="0.0.1+"/>
+
+``` javascript
+isNumber?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是数字
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是数字，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isNumber', () => {
+    expect(_.isNumber(new Number())).toBe(true)
+    expect(_.isNumber('2')).toBe(false)
+    expect(_.isNumber(2)).toBe(true)
+})
+```
+
+<br>
+<br>
+
+## `isNull` <Badge text="0.0.1+"/>
+
+``` javascript
+isNull?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是 Null
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是 Null，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isNull', () => {
+    expect(_.isNull(null)).toBe(true)
+    expect(_.isNull(0)).toBe(false)
+    expect(_.isNull(undefined)).toBe(false)
+})
+```
+
+<br>
+<br>
+
+## `isObject` <Badge text="0.0.1+"/>
+
+``` javascript
+isObject?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是 plainObject
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是 plainObject，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isObject', () => {
+    expect(_.isObject({})).toBe(true)
+    expect(_.isObject(0)).toBe(false)
+    expect(_.isObject(null)).toBe(false)
+})
+```
+
+<br>
+<br>
+
+## `isRegExp` <Badge text="0.0.1+"/>
+
+``` javascript
+isRegExp?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是正则对象
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是正则对象，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isRegExp', () => {
+    expect(_.isRegExp({})).toBe(false)
+    expect(_.isRegExp(new RegExp())).toBe(true)
+    expect(_.isRegExp(/foo/)).toBe(true)
+})
+```
+
+<br>
+<br>
+
+## `isString` <Badge text="0.0.1+"/>
+
+``` javascript
+isString?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是字符串
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是字符串，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isString', () => {
+    expect(_.isString('')).toBe(true)
+    expect(_.isString(0)).toBe(false)
+    expect(_.isString(new String('40'))).toBe(true)
+})
+```
+
+<br>
+<br>
+
+## `isUndefined` <Badge text="0.0.1+"/>
+
+``` javascript
+isUndefined?: (type: any) => Boolean
+```
+
+#### 功能描述
+
+`类型判断`：判断是否是 Undefined
+
+#### 参数
+
+- `(any)`：待判断的数据
+
+#### 返回
+
+`(Boolean)`：如果参数是 Undefined，则返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'saltire-tool'
+
+test('测试 isUndefined', () => {
+    expect(_.isUndefined('')).toBe(false)
+    expect(_.isUndefined(null)).toBe(false)
+    expect(_.isUndefined(0)).toBe(false)
+    expect(_.isUndefined(undefined)).toBe(true)
+})
+```

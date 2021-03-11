@@ -109,7 +109,36 @@ const common: commonInterface = {
   once,
 };
 
+(function () {
+  const array = [
+    "Null",
+    "Undefined",
+    "Object",
+    "Array",
+    "String",
+    "Number",
+    "Boolean",
+    "Function",
+    "RegExp",
+    "Date",
+  ];
+
+  array.forEach(function (item) {
+    common["is" + item] = function (target: string): boolean {
+      const s: string = Object.prototype.toString.call(target);
+      const result = s.match(/\[object (.*?)\]/);
+
+      if (result && result[1]) {
+        return result[1].toLowerCase() === item.toLowerCase();
+      }
+
+      return false;
+    };
+  });
+})();
+
 interface commonInterface {
+  [propName: string]: any;
   /**
    * 多维数组扁平化
    * @param array - 希望被扁平化处理的多维数组
@@ -143,6 +172,56 @@ interface commonInterface {
    * @example once(function(){console.log('foo')})()
    */
   once: (fn: (...args: any[]) => void) => AnyObject;
+  /**
+   * 判断是否是数组
+   * @param type - 待判断的数据
+   */
+  isArray?: (type: any) => boolean;
+  /**
+   * 判断是否是布尔值
+   * @param type - 待判断的数据
+   */
+  isBoolean?: (type: any) => boolean;
+  /**
+   * 判断是否是日期对象
+   * @param type - 待判断的数据
+   */
+  isDate?: (type: any) => boolean;
+  /**
+   * 判断是否是函数
+   * @param type - 待判断的数据
+   */
+  isFunction?: (type: any) => boolean;
+  /**
+   * 判断是否是 Number
+   * @param type - 待判断的数据
+   */
+  isNumber?: (type: any) => boolean;
+  /**
+   * 判断是否是 Null
+   * @param type - 待判断的数据
+   */
+  isNull?: (type: any) => boolean;
+  /**
+   * 判断是否是 plainObject
+   * @param type - 待判断的数据
+   */
+  isObject?: (type: any) => boolean;
+  /**
+   * 判断是否是正则对象
+   * @param type - 待判断的数据
+   */
+  isRegExp?: (type: any) => boolean;
+  /**
+   * 判断是否是字符串
+   * @param type - 待判断的数据
+   */
+  isString?: (type: any) => boolean;
+  /**
+   * 判断是否是 Undefined
+   * @param type - 待判断的数据
+   */
+  isUndefined?: (type: any) => boolean;
 }
 
 export { common, commonInterface };

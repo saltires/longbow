@@ -9,6 +9,6 @@ module.exports = [
   },
   {
     text: 'npm',
-    link: 'https://github.com/ziyi2/algorithms-javascript'
+    link: 'https://www.npmjs.com/package/saltire-tool'
   }
 ]
