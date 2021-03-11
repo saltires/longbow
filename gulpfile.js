@@ -9,6 +9,7 @@ const rollup = require('gulp-rollup')
 const json = require('@rollup/plugin-json');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel')
+const copy = require('copy');
 
 const DEVMODE = process.argv[2] === "--dev" ? true : false
 
@@ -56,8 +57,17 @@ const bundle = () => {
         .pipe(dest('./dist'));
 }
 
+// 将构建生成的文件拷贝一份到 test 文件夹下
+const copyToTest = done => {
+    copy('dist/**/*', 'test/browser', function (err, files) {
+        if (err) throw err;
+        // `files` is an array of the files that were copied
+    });
+    done()
+}
 
-const generator = series(clean, html, compile, bundle)
+
+const generator = series(clean, html, compile, bundle, copyToTest)
 
 const change = DEVMODE ? () => {
     watch('src/**/*.ts', generator)

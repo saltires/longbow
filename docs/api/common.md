@@ -21,7 +21,7 @@ flatten: <T>(arr: Array<T>) => Array<T>;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-util'
+import _ from 'saltire-tool'
 
 _.flatten([1,2,[3,4],[5,6,[7,8]]])
 // => [1,2,3,4,5,6,7,8]
@@ -52,7 +52,7 @@ debounce: (func: any, delay: number) => (...args: any[]) => void;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-util'
+import _ from 'saltire-tool'
 
 const callback = _.debounce(e => console.log(e))
 
@@ -83,9 +83,9 @@ copyToClipboard: (str: string) => void;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-util'
+import _ from 'saltire-tool'
 
-_.copyToClipboard('saltire-util is so helpful!')
+_.copyToClipboard('saltire-tool is so helpful!')
 ```
 
 <br>
@@ -113,7 +113,7 @@ downoladFile: (url: string, name: string) => void;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-util'
+import _ from 'saltire-tool'
 
 _.downoladFile('http:example.com/file.pdf', '百科全书.pdf')
 ```
@@ -142,7 +142,7 @@ once: (fn: (...args: any[]) => void) => AnyObject;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-util'
+import _ from 'saltire-tool'
 
 _.once(function(){console.log('foo')})()
 ```

@@ -10,12 +10,16 @@ function GetQueryString(name: string): string | null {
   }
 }
 
-/* 修改url中的某个参数的值，返回新地址 */
+/**
+ * 修改url中的某个参数的值，返回新地址
+ * @param paramName
+ * @param replaceWith
+ * @returns string
+ */
 function replaceQueryString(paramName: string, replaceWith: string): string {
   const oUrl = window.location.href.toString();
-  const re = new RegExp("/(" + paramName + "=)([^&]*)/gi");
-  const nUrl = oUrl.replace(re, paramName + "=" + replaceWith);
-  return nUrl;
+  const re = eval("/(" + paramName + "=)([^&]*)/gi");
+  return oUrl.replace(re, paramName + "=" + replaceWith);
 }
 
 /* 在URL中追加一个参数 */

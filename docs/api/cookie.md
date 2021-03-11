@@ -29,7 +29,7 @@ setCookie: (
 #### 示例
 
 ``` javascript
-import _ from 'saltire-util'
+import _ from 'saltire-tool'
 
 _.setCookie('example.com', 'foo', 'bar', 3)
 ```
@@ -58,7 +58,7 @@ getCookie: (cname: string) => string;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-util'
+import _ from 'saltire-tool'
 
 _.getCookie('foo') === "bar"
 ```
@@ -88,7 +88,7 @@ clearCookie: (site: string, name: string) => void;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-util'
+import _ from 'saltire-tool'
 
 _.clearCookie('example.com', 'foo')
 ```
@@ -113,7 +113,7 @@ parseCookie: () => AnyObject;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-util'
+import _ from 'saltire-tool'
 
 _.parseCookie() === {foo: "1", bar: "2"}
 ```

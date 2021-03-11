@@ -1,10 +1,10 @@
-const { common } = require('../lib/common')
+import _ from './browser/index.js'
 const puppeteer = require('puppeteer')
 
 test('测试数组扁平化函数：flatten', () => {
-    expect(common.flatten([1, 2, [3, 4]])).toEqual([1, 2, 3, 4])
-    expect(common.flatten([1, 2, [3, 4]])).toEqual([1, 2, 3, 4])
-    expect(common.flatten([1, 2, [3, 4], [5, 6, [7, 8]]])).toEqual([1, 2, 3, 4, 5, 6, 7, 8])
+    expect(_.flatten([1, 2, [3, 4]])).toEqual([1, 2, 3, 4])
+    expect(_.flatten([1, 2, [3, 4]])).toEqual([1, 2, 3, 4])
+    expect(_.flatten([1, 2, [3, 4], [5, 6, [7, 8]]])).toEqual([1, 2, 3, 4, 5, 6, 7, 8])
 })
 
 test('baidu title is correct', async () => {

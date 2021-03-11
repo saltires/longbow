@@ -123,13 +123,13 @@ interface domInterface {
    * 原生js操作元素class的方法，给元素添加class，支持不定长参数
    * @param element - 指定的元素
    */
-  addClass(element: Element): void;
+  addClass(element: Element, ...argus: Array<string>): void;
 
   /**
    * 原生js操作元素class的方法，删除元素的class，支持不定长参数
    * @param element - 指定的元素
    */
-  removeClass(element: Element): void;
+  removeClass(element: Element, ...argus: Array<string>): void;
 
   /**
    * 返回整个 html文档的 scrollLeft 值

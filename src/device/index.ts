@@ -118,7 +118,7 @@ interface deviceInterface {
    */
   elementIsVisibleInViewport: (
     el: Element,
-    partiallyVisible: boolean
+    partiallyVisible?: boolean
   ) => boolean;
 
   /**
@@ -262,7 +262,7 @@ function isIOS(): boolean {
  */
 function isChrome(): boolean {
   if (getUA()) {
-    return /chrome\/\d+/.test(getUA()) && !isEdge;
+    return /chrome\/\d+/.test(getUA()) && !isEdge();
   }
   return false;
 }

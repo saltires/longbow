@@ -1,12 +1,12 @@
 {
   "name": "saltire-tool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "typescript",
     "tool",
     "util",
     "saltire",
-    "javascript"
+    "lodash-similar"
   ],
   "description": "A set of easy to use and suggestive JavaScript tool library",
   "main": "./dist/index.js",
@@ -27,6 +27,7 @@
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
+    "babel-jest": "^26.6.3",
     "conventional-changelog": "^3.1.24",
     "conventional-changelog-cli": "^2.1.1",
     "copy": "^0.3.2",

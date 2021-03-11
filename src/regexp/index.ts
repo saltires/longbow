@@ -113,7 +113,7 @@ interface checkInterface {
    * 网址(url,支持端口和"?+参数"和"#+参数)
    * @param param 待判定数据类型
    */
-  isurl?: (param: any) => boolean;
+  isurl?: (param: string) => boolean;
   /**
    * 视频(video)链接地址（视频格式可按需增删）
    * @param param 待判定数据类型
