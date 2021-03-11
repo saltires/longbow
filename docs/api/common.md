@@ -150,7 +150,7 @@ _.once(function(){console.log('foo')})()
 <br>
 <br>
 
-## `isArray` <Badge text="0.0.1+"/>
+## `isArray` <Badge text="0.0.3+"/>
 
 ``` javascript
 isArray?: (type: any) => Boolean
@@ -185,7 +185,7 @@ test('测试 isArray', () => {
 <br>
 <br>
 
-## `isBoolean` <Badge text="0.0.1+"/>
+## `isBoolean` <Badge text="0.0.3+"/>
 
 ``` javascript
 isBoolean?: (type: any) => Boolean
@@ -220,7 +220,7 @@ test('测试 isBoolean', () => {
 <br>
 <br>
 
-## `isDate` <Badge text="0.0.1+"/>
+## `isDate` <Badge text="0.0.3+"/>
 
 ``` javascript
 isDate?: (type: any) => Boolean
@@ -255,7 +255,7 @@ test('测试 isDate', () => {
 <br>
 <br>
 
-## `isFunction` <Badge text="0.0.1+"/>
+## `isFunction` <Badge text="0.0.3+"/>
 
 ``` javascript
 isFunction?: (type: any) => Boolean
@@ -288,7 +288,7 @@ test('测试 isFunction', () => {
 <br>
 <br>
 
-## `isNumber` <Badge text="0.0.1+"/>
+## `isNumber` <Badge text="0.0.3+"/>
 
 ``` javascript
 isNumber?: (type: any) => Boolean
@@ -321,7 +321,7 @@ test('测试 isNumber', () => {
 <br>
 <br>
 
-## `isNull` <Badge text="0.0.1+"/>
+## `isNull` <Badge text="0.0.3+"/>
 
 ``` javascript
 isNull?: (type: any) => Boolean
@@ -354,7 +354,7 @@ test('测试 isNull', () => {
 <br>
 <br>
 
-## `isObject` <Badge text="0.0.1+"/>
+## `isObject` <Badge text="0.0.3+"/>
 
 ``` javascript
 isObject?: (type: any) => Boolean
@@ -387,7 +387,7 @@ test('测试 isObject', () => {
 <br>
 <br>
 
-## `isRegExp` <Badge text="0.0.1+"/>
+## `isRegExp` <Badge text="0.0.3+"/>
 
 ``` javascript
 isRegExp?: (type: any) => Boolean
@@ -420,7 +420,7 @@ test('测试 isRegExp', () => {
 <br>
 <br>
 
-## `isString` <Badge text="0.0.1+"/>
+## `isString` <Badge text="0.0.3+"/>
 
 ``` javascript
 isString?: (type: any) => Boolean
@@ -453,7 +453,7 @@ test('测试 isString', () => {
 <br>
 <br>
 
-## `isUndefined` <Badge text="0.0.1+"/>
+## `isUndefined` <Badge text="0.0.3+"/>
 
 ``` javascript
 isUndefined?: (type: any) => Boolean
