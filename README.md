@@ -1,4 +1,4 @@
-# saltire-tool v0.01
+# saltire-tool v0.04
 ![image](https://img.shields.io/bundlephobia/min/saltire-tool)
 ![image](https://img.shields.io/npm/l/saltire-tool)
 
@@ -19,7 +19,7 @@ import _ from 'saltire-tool'
 _.debounce((e) => console.log(e.target.value), 3000)
 ```
 
-See the [package source](https://github.com/saltires/saltire-cli) for more details.
+See the [package source](https://github.com/saltires/saltire-util) for more details.
 
 ## Profile
 [![6Y8wYq.gif](https://s3.ax1x.com/2021/03/10/6Y8wYq.gif)](https://imgtu.com/i/6Y8wYq)
