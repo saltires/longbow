@@ -17,7 +17,7 @@ inBrowser: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log(_.inBrowser() === true) // true
 ```
@@ -42,7 +42,7 @@ scrollToTop: () => void;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 _.scrollToTop()
 ```
@@ -75,7 +75,7 @@ elementIsVisibleInViewport: (
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 const el = docuemnt.getElementById('foo')
 
@@ -102,7 +102,7 @@ isIE: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isIE', _.isIE()) 
 ```
@@ -127,7 +127,7 @@ isIE9: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isIE9', _.isIE9()) 
 ```
@@ -152,7 +152,7 @@ isEdge: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isEdge', _.isEdge()) 
 ```
@@ -177,7 +177,7 @@ isAndroid: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isAndroid', _.isAndroid()) 
 ```
@@ -202,7 +202,7 @@ isIOS: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isIOS', _.isIOS()) 
 ```
@@ -227,7 +227,7 @@ isChrome: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isChrome', _.isChrome()) 
 ```
@@ -252,7 +252,7 @@ isgecko: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isgecko', _.isgecko()) 
 ```
@@ -277,7 +277,7 @@ isqq: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isqq', _.isqq()) 
 ```
@@ -302,7 +302,7 @@ ispc: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 ispc', _.ispc()) 
 ```
@@ -327,7 +327,7 @@ isweixin: () => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isweixin', _.isweixin()) 
 ```

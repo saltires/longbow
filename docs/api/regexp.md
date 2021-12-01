@@ -23,7 +23,7 @@ isurl?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isurl', () => {
     expect(_.isurl('http://www.baidu.com')).toBe(true)
@@ -58,7 +58,7 @@ isvideo_url?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isvideo_url', () => {
     expect(_.isvideo_url('https://v.qq.com/x/page/e32320gnosh.mp4')).toBe(true)
@@ -92,7 +92,7 @@ isimg_url?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isimg_url', () => {
     expect(_.isimg_url('https://v.qq.com/x/page/e32320gnosh.jpg')).toBe(true)
@@ -126,7 +126,7 @@ istime_24?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 istime_24', () => {
     expect(_.istime_24('19:20:21')).toBe(true)
@@ -161,7 +161,7 @@ istime_12?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 istime_12', () => {
     expect(_.istime_12('19:20:21')).toBe(false)
@@ -196,7 +196,7 @@ isbase64?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isbase64', () => {
     expect(_.isbase64('foo')).toBe(false)
@@ -231,7 +231,7 @@ ismoney?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 ismoney', () => {
     expect(_.ismoney('3.00')).toBe(true)
@@ -266,7 +266,7 @@ isbank_card?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isbank_card', () => {
     expect(_.isbank_card('3.4')).toBe(false)
@@ -301,7 +301,7 @@ isname_chinese?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isname_chinese', () => {
     expect(_.isname_chinese('3.4')).toBe(false)
@@ -337,7 +337,7 @@ islicense_plate?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 islicense_plate', () => {
     expect(_.islicense_plate('3.4')).toBe(false)
@@ -371,7 +371,7 @@ ismd5?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 ismd5', () => {
     expect(_.ismd5('3.4')).toBe(false)
@@ -405,7 +405,7 @@ isphone_rigorous?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isphone_rigorous', () => {
     expect(_.isphone_rigorous('3.4')).toBe(false)
@@ -441,7 +441,7 @@ isphone_loose?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isphone_loose', () => {
     expect(_.isphone_loose('3.4')).toBe(false)
@@ -477,7 +477,7 @@ isdate?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isdate', () => {
     expect(_.isdate('2020-01-02')).toBe(true)
@@ -512,7 +512,7 @@ isemail?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isemail', () => {
     expect(_.isemail('2020-01-02')).toBe(false)
@@ -547,7 +547,7 @@ istel?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 istel', () => {
     expect(_.istel('2020-01-02')).toBe(false)
@@ -581,7 +581,7 @@ isid_card?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isid_card', () => {
     expect(_.isid_card('2020-01-02')).toBe(false)
@@ -615,7 +615,7 @@ ispassports?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 ispassports', () => {
     expect(_.ispassports('M92274710')).toBe(false)
@@ -647,7 +647,7 @@ isusername?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isusername', () => {
     expect(_.isusername('foobar')).toBe(true)
@@ -683,7 +683,7 @@ ischinese?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 ischinese', () => {
     expect(_.ischinese('foobar')).toBe(false)
@@ -716,7 +716,7 @@ isdecimal?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isdecimal', () => {
     expect(_.isdecimal('foobar')).toBe(false)
@@ -749,7 +749,7 @@ isqq_number?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isqq_number', () => {
     expect(_.isqq_number('100010')).toBe(true)
@@ -783,7 +783,7 @@ ispassword?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 ispassword', () => {
     expect(_.ispassword('Abcde')).toBe(false)
@@ -816,7 +816,7 @@ isip_v4?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isip_v4', () => {
     expect(_.isip_v4('Abcde')).toBe(false)
@@ -849,7 +849,7 @@ iscolor_16?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 iscolor_16', () => {
     expect(_.iscolor_16('Abcde')).toBe(false)
@@ -882,7 +882,7 @@ iswx_username?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 iswx_username', () => {
     expect(_.iswx_username('cbc')).toBe(false)
@@ -914,7 +914,7 @@ iszip_code?: (param: any) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 邮政编码', () => {
     expect(_.iszip_code('230000')).toBe(true)

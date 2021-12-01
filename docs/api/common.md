@@ -21,7 +21,7 @@ flatten: <T>(arr: Array<T>) => Array<T>;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 _.flatten([1,2,[3,4],[5,6,[7,8]]])
 // => [1,2,3,4,5,6,7,8]
@@ -52,7 +52,7 @@ debounce: (func: any, delay: number) => (...args: any[]) => void;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 const callback = _.debounce(e => console.log(e))
 
@@ -83,9 +83,9 @@ copyToClipboard: (str: string) => void;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
-_.copyToClipboard('saltire-tool is so helpful!')
+_.copyToClipboard('longbow is so helpful!')
 ```
 
 <br>
@@ -113,7 +113,7 @@ downoladFile: (url: string, name: string) => void;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 _.downoladFile('http:example.com/file.pdf', '百科全书.pdf')
 ```
@@ -142,7 +142,7 @@ once: (fn: (...args: any[]) => void) => AnyObject;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 _.once(function(){console.log('foo')})()
 ```
@@ -171,7 +171,7 @@ isArray?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isArray', () => {
     expect(_.isArray('[]')).toBe(false)
@@ -206,7 +206,7 @@ isBoolean?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isBoolean', () => {
     expect(_.isBoolean([])).toBe(false)
@@ -241,7 +241,7 @@ isDate?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isDate', () => {
     expect(_.isDate([])).toBe(false)
@@ -276,7 +276,7 @@ isFunction?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isFunction', () => {
     expect(_.isFunction([])).toBe(false)
@@ -309,7 +309,7 @@ isNumber?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isNumber', () => {
     expect(_.isNumber(new Number())).toBe(true)
@@ -342,7 +342,7 @@ isNull?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isNull', () => {
     expect(_.isNull(null)).toBe(true)
@@ -375,7 +375,7 @@ isObject?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isObject', () => {
     expect(_.isObject({})).toBe(true)
@@ -408,7 +408,7 @@ isRegExp?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isRegExp', () => {
     expect(_.isRegExp({})).toBe(false)
@@ -441,7 +441,7 @@ isString?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isString', () => {
     expect(_.isString('')).toBe(true)
@@ -474,7 +474,7 @@ isUndefined?: (type: any) => Boolean
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 isUndefined', () => {
     expect(_.isUndefined('')).toBe(false)

@@ -8,7 +8,7 @@ import { str, stringInterface } from "./string/index";
 import { url, urlInterface } from "./url/index";
 import { name, version } from "../package.json";
 
-interface saltireUtilInterface
+interface longbowInterface
   extends commonInterface,
     cookieInterface,
     dateInterface,
@@ -21,7 +21,7 @@ interface saltireUtilInterface
   name: string;
 }
 
-const saltireUtil: saltireUtilInterface = Object.assign(
+const longbow: longbowInterface = Object.assign(
   { name, version },
   cookie,
   common,
@@ -33,4 +33,4 @@ const saltireUtil: saltireUtilInterface = Object.assign(
   url
 );
 
-export default saltireUtil;
+export default longbow;

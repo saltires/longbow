@@ -21,7 +21,7 @@ camelCase(string: string): string | AnyObject;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 camelCase', () => {
     expect(_.camelCase('Foo Bar')).toBe('fooBar')
@@ -54,7 +54,7 @@ endsWith(str: string, match: string): boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 endsWith', () => {
     expect(_.endsWith("foobar", "bar")).toBe(true)
@@ -86,7 +86,7 @@ startsWith(str: string, match: string): boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 startsWith', () => {
     expect(_.startsWith("foobar", "bar")).toBe(false)
@@ -114,7 +114,7 @@ randomString(): string;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 randomString', () => {
     expect(typeof _.randomString()).toBe('string')
@@ -148,7 +148,7 @@ hiddenNumber(str: string, frontLen: number, endLen: number): string;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 hiddenNumber', () => {
     expect(_.hiddenNumber('19122334455', 3, 4)).toBe('191****4455')
@@ -181,7 +181,7 @@ randomNumber(min: number, max: number): number;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 test('测试 randomNumber', () => {
     expect(_.randomNumber(0, 10)).toBeGreaterThanOrEqual(0)

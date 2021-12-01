@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /hero.png
-heroText: saltire-tool
+heroText: longbow
 tagline: 实用、快速、提示性强的 Javascript 工具库
 actionText: 开始使用
 actionLink: /api/common

@@ -6,7 +6,7 @@ import { domInterface } from "./dom/index";
 import { checkInterface } from "./regexp/index";
 import { stringInterface } from "./string/index";
 import { urlInterface } from "./url/index";
-interface saltireUtilInterface
+interface longbowInterface
   extends commonInterface,
     cookieInterface,
     dateInterface,
@@ -18,8 +18,8 @@ interface saltireUtilInterface
   version: string;
   name: string;
 }
-declare const saltireUtil: saltireUtilInterface;
-export default saltireUtil;
+declare const longbow: longbowInterface;
+export default longbow;
 
 declare const common: commonInterface;
 interface commonInterface {

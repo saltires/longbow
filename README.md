@@ -1,19 +1,19 @@
-# saltire-tool v0.04
+# longbow
 ![image](https://img.shields.io/bundlephobia/min/saltire-tool)
 ![image](https://img.shields.io/npm/l/saltire-tool)
 
-The [saltire-tool](http://172.81.212.62/) library exported as [Node.js](https://nodejs.org/) modules.
+The [longbow](http://172.81.212.62/) library exported as [Node.js](https://nodejs.org/) modules.
 
 ## Installation
 
 Using npm:
 ```shell
-$ npm i --save saltire-tool
+$ npm i --save longbow
 ```
 
 In Node.js:
 ```js
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 // debounce
 _.debounce((e) => console.log(e.target.value), 3000)

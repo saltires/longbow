@@ -21,7 +21,7 @@ GetQueryString(name: string): string | null;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 // url：http:example.html?foo=bar
 
@@ -55,7 +55,7 @@ replaceQueryString(paramName: string, replaceWith: string): string;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 // url：http://localhost:5000/browser.test?foo=123
 
@@ -89,7 +89,7 @@ addQueryString(paramName: string, replaceWith: string): string | null;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 // url：http://localhost:5000/browser.test?foo=123
 
@@ -121,7 +121,7 @@ isAbsoluteURL(str: string): boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 isAbsoluteURL', _.isAbsoluteURL('https://google.com'))
 // true

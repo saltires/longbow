@@ -22,7 +22,7 @@ hasClass: (element: Element, className: string) => boolean;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 const el = document.getElementById('top') 
 
@@ -54,7 +54,7 @@ addClass(element: Element, ...argus: Array<string>): void
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 const el = document.getElementById('top') 
 
@@ -86,7 +86,7 @@ removeClass(element: Element, ...argus: Array<string>): void
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 const el = document.getElementById('top') 
 
@@ -113,7 +113,7 @@ getScrollLeft(): number;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 getScrollLeft', _.getScrollLeft());
 ```
@@ -138,7 +138,7 @@ getScrollTop(): number;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 getScrollTop', _.getScrollTop());
 ```
@@ -169,7 +169,7 @@ getElementTop(el: HTMLElement): number;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 const el = document.getElementById('top') 
 
@@ -196,7 +196,7 @@ getPagearea(): ObjectWidthHeight | null;
 #### 示例
 
 ``` javascript
-import _ from 'saltire-tool'
+import _ from 'longbow'
 
 console.log('测试 getPagearea', _.getPagearea());
 ```

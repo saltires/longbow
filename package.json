@@ -1,11 +1,10 @@
 {
-  "name": "saltire-tool",
-  "version": "0.0.3",
+  "name": "longbow",
+  "version": "0.0.1",
   "keywords": [
     "typescript",
     "tool",
     "util",
-    "saltire",
     "lodash-similar"
   ],
   "description": "A set of easy to use and suggestive JavaScript tool library",
