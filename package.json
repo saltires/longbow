@@ -1,6 +1,6 @@
 {
   "name": "longbow",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "typescript",
     "tool",
@@ -80,5 +80,8 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "pub": "node publish/index.js"
+  },
+  "dependencies": {
+    "mathjs": "^10.0.1"
   }
 }

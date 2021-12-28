@@ -1,5 +1,6 @@
 import _ from './browser/index.js'
 
+
 describe('测试正则相关', () => {
     test('测试 isurl', () => {
         expect(_.isurl('http://www.baidu.com')).toBe(true)
@@ -7,6 +8,11 @@ describe('测试正则相关', () => {
         expect(_.isurl('http://localhost:8081')).toBe(false)
         expect(_.isurl('http://foo.localhost:8081')).toBe(true)
         expect(_.isurl('api/dom.html#removeclass')).toBe(false)
+    })
+
+    test('测试是否全是空格', () => {
+        expect(_.isAllSpace('   ')).toBe(true)
+        expect(_.isAllSpace('  sdsad')).toBe(false)
     })
 
     test('测试 isvideo_url', () => {

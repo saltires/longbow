@@ -1,10 +1,14 @@
 import _ from './browser/index.js'
-const puppeteer = require('puppeteer')
+// const puppeteer = require('puppeteer')
 
 test('测试数组扁平化函数：flatten', () => {
     expect(_.flatten([1, 2, [3, 4]])).toEqual([1, 2, 3, 4])
     expect(_.flatten([1, 2, [3, 4]])).toEqual([1, 2, 3, 4])
     expect(_.flatten([1, 2, [3, 4], [5, 6, [7, 8]]])).toEqual([1, 2, 3, 4, 5, 6, 7, 8])
+})
+
+test('测试高精确度数字运算', () => {
+    expect(_.multiply(0.000001, 100) == 0.0001).toBeTruthy()
 })
 
 // test('baidu title is correct', async () => {

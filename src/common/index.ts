@@ -1,3 +1,6 @@
+import * as math from "mathjs";
+import { MathType } from "mathjs";
+
 /**
  * @date 2020-12-04
  * @param { Array }
@@ -7,7 +10,7 @@
  */
 function flatten<T>(arr: Array<T>): Array<T> {
   while (arr.some((item) => Array.isArray(item))) {
-    arr = [].concat(...((arr as unknown) as ConcatArray<never>[]));
+    arr = [].concat(...(arr as unknown as ConcatArray<never>[]));
   }
 
   return arr;
@@ -101,12 +104,36 @@ function once(fn: (...args: any[]) => void): AnyObject {
   };
 }
 
+// 加
+const add = (num1: number, num2: number): MathType => {
+  return math.add(math.bignumber(num1), math.bignumber(num2));
+};
+
+// 乘
+const multiply = (num1: number, num2: number): MathType => {
+  return math.multiply(math.bignumber(num1), math.bignumber(num2));
+};
+
+// 减
+const subtract = (num1: number, num2: number): MathType => {
+  return math.subtract(math.bignumber(num1), math.bignumber(num2));
+};
+
+// 除
+const divide = (num1: number, num2: number): MathType => {
+  return math.divide(math.bignumber(num1), math.bignumber(num2));
+};
+
 const common: commonInterface = {
   flatten,
   debounce,
   copyToClipboard,
   downoladFile,
   once,
+  add,
+  multiply,
+  subtract,
+  divide,
 };
 
 (function () {
@@ -139,6 +166,34 @@ const common: commonInterface = {
 
 interface commonInterface {
   [propName: string]: any;
+  /**
+   * 高精确度的加法运算，内部使用 mathjs 的 bignumber 实现
+   * @param num1
+   * @param num2
+   * @returns MathType
+   */
+  add: (num1: number, num2: number) => MathType;
+  /**
+   * 高精确度的乘法运算，内部使用 mathjs 的 bignumber 实现
+   * @param num1
+   * @param num2
+   * @returns MathType
+   */
+  multiply: (num1: number, num2: number) => MathType;
+  /**
+   * 高精确度的减法运算，内部使用 mathjs 的 bignumber 实现
+   * @param num1
+   * @param num2
+   * @returns MathType
+   */
+  subtract: (num1: number, num2: number) => MathType;
+  /**
+   * 高精确度的除法运算，内部使用 mathjs 的 bignumber 实现
+   * @param num1
+   * @param num2
+   * @returns MathType
+   */
+  divide: (num1: number, num2: number) => MathType;
   /**
    * 多维数组扁平化
    * @param array - 希望被扁平化处理的多维数组

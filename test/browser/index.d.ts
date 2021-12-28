@@ -21,9 +21,38 @@ interface longbowInterface
 declare const longbow: longbowInterface;
 export default longbow;
 
+import { MathType } from "mathjs";
 declare const common: commonInterface;
 interface commonInterface {
   [propName: string]: any;
+  /**
+   * 高精确度的加法运算，内部使用 mathjs 的 bignumber 实现
+   * @param num1
+   * @param num2
+   * @returns MathType
+   */
+  add: (num1: number, num2: number) => MathType;
+  /**
+   * 高精确度的乘法运算，内部使用 mathjs 的 bignumber 实现
+   * @param num1
+   * @param num2
+   * @returns MathType
+   */
+  multiply: (num1: number, num2: number) => MathType;
+  /**
+   * 高精确度的减法运算，内部使用 mathjs 的 bignumber 实现
+   * @param num1
+   * @param num2
+   * @returns MathType
+   */
+  subtract: (num1: number, num2: number) => MathType;
+  /**
+   * 高精确度的除法运算，内部使用 mathjs 的 bignumber 实现
+   * @param num1
+   * @param num2
+   * @returns MathType
+   */
+  divide: (num1: number, num2: number) => MathType;
   /**
    * 多维数组扁平化
    * @param array - 希望被扁平化处理的多维数组
@@ -357,6 +386,11 @@ interface checkInterface {
    * @param param 待判定数据类型
    */
   isurl?: (param: string) => boolean;
+  /**
+   * 是否全是空格
+   * @param param 待判定数据
+   */
+  isAllSpace?: (param: string) => boolean;
   /**
    * 视频(video)链接地址（视频格式可按需增删）
    * @param param 待判定数据类型
