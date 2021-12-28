@@ -12,5 +12,6 @@ features:
     details: 使用 Typescript 开发，使用时具有语法强提示，推荐使用 VsCode
   - title: 单文件库
     details: 经 gulp 及 rollup 压缩打包为单文件，体积小，速度快
-footer: <a href="https://beian.miit.gov.cn">皖ICP备2021004311号-1</a>
+footer: 皖ICP备2021004311号-1
 ---
+<a href="https://beian.miit.gov.cn">皖ICP备2021004311号-1</a>
