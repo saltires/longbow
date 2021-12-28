@@ -1,5 +1,37 @@
 # 正则模块
 
+## `isAllSpace` <Badge text="0.0.2+"/>
+
+``` javascript
+isAllSpace?: (param: string) => boolean;
+```
+
+#### 功能描述
+
+`是否全是空格`：判断指定字符串是否全是空格
+
+#### 参数
+
+- `url(String)`：必须，待判定字符串
+
+#### 返回
+
+`(Boolean)`：如果指定字符串全是空格，返回 true
+
+#### 示例
+
+``` javascript
+import _ from 'longbow'
+
+test('测试是否全是空格', () => {
+    expect(_.isAllSpace('   ')).toBe(true)
+    expect(_.isAllSpace('  sdsad')).toBe(false)
+})
+```
+
+<br>
+<br>
+
 ## `isurl` <Badge text="0.0.1+"/>
 
 ``` javascript

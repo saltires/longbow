@@ -1,5 +1,125 @@
 # 通用模块
 
+## `add` <Badge text="0.0.2+"/>
+
+``` javascript
+add: (num1: number, num2: number) => MathType;
+```
+
+#### 功能描述
+
+`高精确度加法运算`：高精确度的加法运算，内部使用 mathjs 的 bignumber 实现
+
+#### 参数
+
+- `numer1`：必须，待运算数字
+- `numer1`：必须，待运算数字
+
+#### 返回
+
+`MathType`：MathType 对象
+
+#### 示例
+
+``` javascript
+import _ from 'longbow'
+
+expect(_.add(0.000001, 0.000004) == 0.000005).toBeTruthy()
+```
+
+<br>
+<br>
+
+## `multiply` <Badge text="0.0.2+"/>
+
+``` javascript
+multiply: (num1: number, num2: number) => MathType;
+```
+
+#### 功能描述
+
+`高精确度乘法运算`：高精确度的乘法运算，内部使用 mathjs 的 bignumber 实现
+
+#### 参数
+
+- `numer1`：必须，待运算数字
+- `numer1`：必须，待运算数字
+
+#### 返回
+
+`MathType`：MathType 对象
+
+#### 示例
+
+``` javascript
+import _ from 'longbow'
+
+expect(_.multiply(0.000001, 100) == 0.0001).toBeTruthy()
+```
+
+<br>
+<br>
+
+## `subtract` <Badge text="0.0.2+"/>
+
+``` javascript
+subtract: (num1: number, num2: number) => MathType;
+```
+
+#### 功能描述
+
+`高精确度减法运算`：高精确度的减法运算，内部使用 mathjs 的 bignumber 实现
+
+#### 参数
+
+- `numer1`：必须，待运算数字
+- `numer1`：必须，待运算数字
+
+#### 返回
+
+`MathType`：MathType 对象
+
+#### 示例
+
+``` javascript
+import _ from 'longbow'
+
+expect(_.subtract(0.000003, 0.000001) == 0.000002).toBeTruthy()
+```
+
+<br>
+<br>
+
+## `divide` <Badge text="0.0.2+"/>
+
+``` javascript
+divide: (num1: number, num2: number) => MathType;
+```
+
+#### 功能描述
+
+`高精确度除法运算`：高精确度的除法运算，内部使用 mathjs 的 bignumber 实现
+
+#### 参数
+
+- `numer1`：必须，待运算数字
+- `numer1`：必须，待运算数字
+
+#### 返回
+
+`MathType`：MathType 对象
+
+#### 示例
+
+``` javascript
+import _ from 'longbow'
+
+expect(_.divide(0.1, 0.000001) == 100000).toBeTruthy()
+```
+
+<br>
+<br>
+
 ## `flatten` <Badge text="0.0.1+"/>
 
 ``` javascript

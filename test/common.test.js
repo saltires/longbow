@@ -9,6 +9,9 @@ test('测试数组扁平化函数：flatten', () => {
 
 test('测试高精确度数字运算', () => {
     expect(_.multiply(0.000001, 100) == 0.0001).toBeTruthy()
+    expect(_.add(0.000001, 0.000004) == 0.000005).toBeTruthy()
+    expect(_.subtract(0.000003, 0.000001) == 0.000002).toBeTruthy()
+    expect(_.divide(0.1, 0.000001) == 100000).toBeTruthy()
 })
 
 // test('baidu title is correct', async () => {
